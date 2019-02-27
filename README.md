@@ -12,7 +12,7 @@ This will assume that your template is placed in a file called ```template.html`
 To dedicate editable areas we use comments like ```<!-- BeginEditable -->``` and ```<!-- EndEditable -->```. It is recommended to wrap the entire title tag inside of these since comments are visible when used inside the title tags.
 
 ## Example
-The following is a basic example of how to use this repo.
+The following is a basic example of how a template file would look.
 ```html
 <!DOCTYPE html>
 <html>
