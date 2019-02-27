@@ -1,0 +1,23 @@
+{
+  "name": "html-template-manager",
+  "version": "1.0.0",
+  "description": "A simple template manager for html files.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Plazide/html-template-manager.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Plazide/html-template-manager/issues"
+  },
+  "homepage": "https://github.com/Plazide/html-template-manager#readme",
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  }
+}
