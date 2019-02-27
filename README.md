@@ -30,5 +30,5 @@ The following is a basic example of how to use this repo.
             
         <!-- EndEditable -->
     </body>
-</html
+</html>
 ```
