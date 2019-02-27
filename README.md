@@ -3,7 +3,7 @@ This is a simple HTML template manager.
 
 ## How to use?
 Right now there is no CLI implemented, so the best way to use this tool is to clone this repo and then run:
-```
+```CLI
 node index.js
 ```
 This will assume that your template is placed in a file called ```template.html``` located in ```./templates```, and your editable html files are places in ```./static```. While the script is running, it will automatically detect when new files are created in the static folder and add the template html to them. For this reason, it is best to run the script before creating any html files.
