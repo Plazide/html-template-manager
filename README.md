@@ -9,6 +9,11 @@ Easiest way to install this tool is by using npm:
 npm install html-template-manager
 ```
 
+It can also be added as a dev dependency:
+```
+npm install --save-dev html-template-manager
+```
+
 You could also just clone this repo and use it, but I don't recommend it.
 
 ## How to use?
