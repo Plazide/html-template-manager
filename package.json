@@ -1,10 +1,13 @@
 {
-  "name": "html-template-manager",
+  "name": "@plazide/html-template-manager",
   "version": "1.0.0",
   "description": "A simple template manager for html files.",
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js"
+  },
+  "bin": {
+    "template": "./bin/template.js"
   },
   "repository": {
     "type": "git",
@@ -19,5 +22,6 @@
   "homepage": "https://github.com/Plazide/html-template-manager#readme",
   "devDependencies": {
     "nodemon": "^1.18.10"
-  }
+  },
+  "dependencies": {}
 }
