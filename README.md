@@ -1,36 +1,62 @@
-# HTML Template Manager
-This is a simple HTML template manager.
+# HTML Template manager
+
+A simple template manager for html files.
+
+## Installation
+
+Easiest way to install this tool is by using npm:
+```
+npm install html-template-manager
+```
+
+You could also just clone this repo and use it, but I don't recommend it.
 
 ## How to use?
-Right now there is no CLI implemented, so the best way to use this tool is to clone this repo and then run:
-```bash
-node index.js
-```
-This will assume that your template is placed in a file called ```template.html``` located in ```./templates```, and your editable html files are places in ```./static```. While the script is running, it will automatically detect when new files are created in the static folder and add the template html to them. For this reason, it is best to run the script before creating any html files.
 
-When changing the template no other action that saving the file is needed to update the files dependent on the template.
+To use the template manager you need to have a dedicated folder for your html like ```./static```. It is also recommended to create a folder containing your template/templates, like ```./templates/template.html```. Your template file will just be an ordinary html file containing comments that outline dedicated editable areas. 
+
+To run the template manager simply do:
+
+```bash
+template <your-template-file> <your-html-folder>
+```
+
+By running the CLI with both of these arguments, the template manager will automatically create the files and folders if they don't already exist. If no template exists it will generate a default template containing some boilerplate html.
 
 ### Editable areas
-To dedicate editable areas we use comments like ```<!-- BeginEditable -->``` and ```<!-- EndEditable -->```. It is recommended to wrap the entire title tag inside of these since comments are visible when used inside the title tags.
 
-## Example
-The following is a basic example of how a template file would look.
+Inside of your template file, you dedicate editable areas by using ```<!-- BeginEditable -->``` and ```<!-- EndEditable -->```. It is recommended to wrap the entire title tag, both opening and closing tag, inside of these since comments are visible when inside the title tag.
+
+## Examples
+
+Run the template manager with ```./templates/default.html``` as the template, and ```./static``` as your html folder. This example is run from the root directory of the application.
+
+```bash
+template templates/default.html static
+```
+
+A basic template file.
+
 ```html
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8" />
-        <!-- BeginEditable --><title>This is template</title><!-- EndEditable -->
-    </head>
-    <body>
-        <header>
-            <a href="/">Home</a>
-            <a href="/about">About</a>
-            <a href="/contact">Contact</a>
-        </header>
-        <!-- BeginEditable -->
-            
-        <!-- EndEditable -->
-    </body>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<!-- BeginEditable -->
+	<title>Document</title>
+	<!-- EndEditable -->
+</head>
+<body>
+	<header>
+		<a href="/index.html">Home</a>
+		<a href="/contact.html">Contact</a>
+		<a href="/about.html">About</a>
+	</header>
+	<!-- BeginEditable -->
+
+	<!-- EndEditable -->
+</body>
 </html>
 ```
