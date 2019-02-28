@@ -1,5 +1,5 @@
 {
-  "name": "@plazide/html-template-manager",
+  "name": "html-template-manager",
   "version": "1.0.0",
   "description": "A simple template manager for html files.",
   "main": "index.js",
