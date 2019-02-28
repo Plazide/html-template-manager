@@ -4,6 +4,7 @@ const args = process.argv;
 const template = args[2];
 const static = args[3];
 
-templates.listen(template, static);
+if(!template || !static)
+	throw new Error("Missing arguments");
 
-console.log(args);
+templates.listen(template, static);
