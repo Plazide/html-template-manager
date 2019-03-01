@@ -1,6 +1,6 @@
 {
   "name": "html-template-manager",
-  "version": "1.0.0",
+  "version": "0.5.1",
   "description": "A simple template manager for html files.",
   "main": "index.js",
   "scripts": {
@@ -13,7 +13,14 @@
     "type": "git",
     "url": "git+https://github.com/Plazide/html-template-manager.git"
   },
-  "keywords": [],
+  "keywords": [
+	  "html",
+	  "template",
+	  "manager",
+	  "development",
+	  "engine",
+	  "web"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
