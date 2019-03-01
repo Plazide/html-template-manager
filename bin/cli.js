@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+
 const templates = require("../lib/index");
 const args = process.argv;
 const template = args[2];
