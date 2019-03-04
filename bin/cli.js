@@ -4,8 +4,22 @@ const fs = require("fs");
 const script = require("../lib/index");
 const config = require("../data/config.json");
 const args = process.argv;
-let template = args[2];
-let static = args[3];
+const flag = "--once";
+const once = flagExists(args, flag);
+let template = args[2] !== flag ? args[2] : null;
+let static = args[3] !== flag ? args[3] : null;
+
+function flagExists(args){
+	let result = false;
+
+	for(let arg of args){
+		if(arg === flag){
+			result = true;
+		}
+	}
+
+	return result;
+}
 
 if(template || static){
 	// If template or static arguments are passed to the cli,
@@ -13,10 +27,10 @@ if(template || static){
 	config.static_folder = static;
 	config.template_file = template;
 
-	fs.writeFileSync(JSON.stringify(config), "../data/config.json");
+	fs.writeFileSync("./data/config.json", JSON.stringify(config));
 }else{
 	static = config.static_folder;
 	template = config.template_file;
 }
 
-script.listen(template, static);
+script.listen(template, static, once);
