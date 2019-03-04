@@ -4,7 +4,7 @@
   "description": "A simple template manager for html files.",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon bin/cli.js"
   },
   "bin": {
     "template": "bin/cli.js"
@@ -14,12 +14,12 @@
     "url": "git+https://github.com/Plazide/html-template-manager.git"
   },
   "keywords": [
-	  "html",
-	  "template",
-	  "manager",
-	  "development",
-	  "engine",
-	  "web"
+    "html",
+    "template",
+    "manager",
+    "development",
+    "engine",
+    "web"
   ],
   "author": "Carl Hallén",
   "license": "ISC",
