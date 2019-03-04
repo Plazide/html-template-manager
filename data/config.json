@@ -1,0 +1,4 @@
+{
+	"static_folder": "static",
+	"template_file": "templates/template.html"
+}
