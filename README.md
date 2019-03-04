@@ -20,26 +20,40 @@ You could also just clone this repo and run.
 
 To use the template manager you need to have a dedicated folder for your html like ```./static```. It is also recommended to create a folder containing your template/templates, like ```./templates/template.html```. Your template file will just be an ordinary html file containing comments that outline dedicated editable areas. 
 
+#### Use cases
+This template manager supports two kinds of use cases. You can either run the template CLI and let it update your html files everytime you make changes to your template, or you could run it manually whenever you see fit.
+
 #### Specifying paths
 To run the template manager simply do:
 ```bash
 template <your-template-file> <your-html-folder>
 ```
-By running the CLI with both of these arguments, the template manager will automatically create the files and folders if they don't already exist.
+or, to only run it once to update changes:
+```bash
+template <your-template-file> <your-html-folder> --once
+```
 
-#### Using default paths
+By running the CLI with both of these arguments, the template manager will automatically create the files and folders if they don't already exist. It will also save the paths so that you don't have to specify them again, look at [Not specifying paths](#not-specifying-paths). If you for some reason decide you want to change the paths in the future, simply run the same command but specify different paths.
+
+#### Not specifying paths
 Alternatively, you could omit the arguments and use the default paths that the manager creates for you:
 ```bash
 template
 ```
+or, to only run it once and update changes:
+```bash
+template --once
+```
 This is the easiest way to run the manager.
 
+If you have already given the template manager paths in the past, they will be saved. This means that you can run the manager this way everytime but the first time. If you don't want custom paths, then you only ever have to use it this way.
+
 #### Without npm
-If you, against my recommendations, chose to clone this repo, you would run:
+If you chose to clone this repo, you would run:
 ```bash
 node lib/index.js
 ```
-This is not recommended since it will prevent you from add arguments.
+This is not recommended since it will prevent you from adding arguments.
 
 #### Declaring template files
 Files that are supposed to inherit the html of the template will need ```<!-- TemplateFile -->``` comment somewhere inside of them. It doesn't really matter where the comment is placed, but it is recommended to put it at the top of the head tag.
