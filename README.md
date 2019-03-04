@@ -5,12 +5,12 @@ A simple template manager for html files.
 ## Installation
 
 Easiest way to install this tool is by using npm:
-```
+```sh
 npm install html-template-manager
 ```
 
 It can also be added as a dev dependency:
-```
+```sh
 npm install --save-dev html-template-manager
 ```
 
@@ -18,18 +18,18 @@ You could also just clone this repo and run.
 
 ## How to use?
 
-To use the template manager you need to have a dedicated folder for your html like ```./static```. It is also recommended to create a folder containing your template/templates, like ```./templates/template.html```. Your template file will just be an ordinary html file containing comments that outline dedicated editable areas. 
+To use the template manager you need to have a dedicated folder for your html like `./static`. It is also recommended to create a folder containing your template/templates, like `./templates/template.html`. Your template file will just be an ordinary html file containing comments that outline dedicated editable areas. 
 
 #### Use cases
 This template manager supports two kinds of use cases. You can either run the template CLI and let it update your html files everytime you make changes to your template, or you could run it manually whenever you see fit.
 
 #### Specifying paths
 To run the template manager simply do:
-```bash
+```sh
 template <your-template-file> <your-html-folder>
 ```
 or, to only run it once to update changes:
-```bash
+```sh
 template <your-template-file> <your-html-folder> --once
 ```
 
@@ -37,11 +37,11 @@ By running the CLI with both of these arguments, the template manager will autom
 
 #### Not specifying paths
 Alternatively, you could omit the arguments and use the default paths that the manager creates for you:
-```bash
+```sh
 template
 ```
 or, to only run it once and update changes:
-```bash
+```sh
 template --once
 ```
 This is the easiest way to run the manager.
@@ -50,22 +50,22 @@ If you have already given the template manager paths in the past, they will be s
 
 #### Without npm
 If you chose to clone this repo, you would run:
-```bash
+```sh
 node lib/index.js
 ```
 This is not recommended since it will prevent you from adding arguments.
 
 #### Declaring template files
-Files that are supposed to inherit the html of the template will need ```<!-- TemplateFile -->``` comment somewhere inside of them. It doesn't really matter where the comment is placed, but it is recommended to put it at the top of the head tag.
+Files that are supposed to inherit the html of the template will need `<!-- TemplateFile -->` comment somewhere inside of them. It doesn't really matter where the comment is placed, but it is recommended to put it at the top of the head tag.
 
 #### Declaring editable areas
-Inside of your template file, you dedicate editable areas by using ```<!-- BeginEditable -->``` and ```<!-- EndEditable -->```. It is recommended to wrap the entire title tag, both opening and closing tag, inside of these since comments are visible when inside the title tag.
+Inside of your template file, you dedicate editable areas by using `<!-- BeginEditable -->` and `<!-- EndEditable -->`. It is recommended to wrap the entire title tag, both opening and closing tag, inside of these since comments are visible when inside the title tag.
 
 ## Examples
 
 #### Running with paths
-Run the template manager with ```./templates/default.html``` as the template, and ```./static``` as your html folder. This example is run from the root directory of the application.
-```bash
+Run the template manager with `./templates/default.html` as the template, and `./static` as your html folder. This example is run from the root directory of the application.
+```sh
 template templates/default.html static
 ```
 
