@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 const fs = require("fs");
+const path = require("path")
 const script = require("../lib/index");
 const config = require("../data/config.json");
 const args = process.argv;
@@ -27,7 +28,7 @@ if(template || static){
 	config.static_folder = static;
 	config.template_file = template;
 
-	fs.writeFileSync("./data/config.json", JSON.stringify(config));
+	fs.writeFileSync(path.join(__dirname, "data", "config.json"), JSON.stringify(config));
 }else{
 	static = config.static_folder;
 	template = config.template_file;
