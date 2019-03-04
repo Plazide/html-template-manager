@@ -1,1 +1,1 @@
-{"static_folder":"public","template_file":"templates/template.html"}
+{"static_folder":"static","template_file":"templates/template.html"}
