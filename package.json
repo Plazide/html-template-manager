@@ -4,7 +4,8 @@
   "description": "A simple template manager for html files.",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon bin/cli.js"
+    "start": "nodemon bin/cli.js",
+    "postinstall": "node lib/postinstall.js"
   },
   "bin": {
     "template": "bin/cli.js"
