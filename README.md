@@ -41,8 +41,10 @@ node lib/index.js
 ```
 This is not recommended since it will prevent you from add arguments.
 
-#### Editable areas
+#### Declaring template files
+Files that are supposed to inherit the html of the template will need ```<!-- TemplateFile -->``` comment somewhere inside of them. It doesn't really matter where the comment is placed, but it is recommended to put it at the top of the head tag.
 
+#### Declaring editable areas
 Inside of your template file, you dedicate editable areas by using ```<!-- BeginEditable -->``` and ```<!-- EndEditable -->```. It is recommended to wrap the entire title tag, both opening and closing tag, inside of these since comments are visible when inside the title tag.
 
 ## Examples
