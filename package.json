@@ -7,8 +7,9 @@
     "start": "nodemon bin/cli.js",
     "postinstall": "node lib/postinstall.js"
   },
+  "preferGlobal": true,
   "bin": {
-    "template": "bin/cli.js"
+    "template": "./bin/cli.js"
   },
   "repository": {
     "type": "git",
