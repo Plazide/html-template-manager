@@ -6,19 +6,30 @@ A simple template manager for html files.
 
 Easiest way to install this tool is by using npm:
 ```sh
-npm install html-template-manager
+npm install -g html-template-manager
 ```
 
 It can also be added as a dev dependency:
 ```sh
-npm install --save-dev html-template-manager
+npm install --save-dev -g html-template-manager
 ```
 
 You could also just clone this repo and run.
 
+This package should be installed globally to work properly, which means you need the `-g` flag.
+
 ## How to use?
 
-To use the template manager you need to have a dedicated folder for your html like `./static`. It is also recommended to create a folder containing your template/templates, like `./templates/template.html`. Your template file will just be an ordinary html file containing comments that outline dedicated editable areas. 
+Once the package is installed globally, all you need to do is run:
+```sh
+template
+```
+or, to update files once:
+```
+template --once
+```
+
+By using these either of these commands, the html-template-manager will create the necessary folders and files that it needs to function. These include the `./static` folder where your html files will be placed, and `./templates/template.html` which is your template file. Any html that is the same across html files should be in here.
 
 #### Use cases
 This template manager supports two kinds of use cases. You can either run the template CLI and let it update your html files everytime you make changes to your template, or you could run it manually whenever you see fit.
