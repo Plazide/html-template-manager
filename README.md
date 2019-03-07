@@ -3,16 +3,10 @@
 A simple template manager for html files.
 
 ## Installation
-This package should be installed globally to work properly, which means you need the `-g` flag.
 
-Easiest way to install this tool is by using npm:
+Easiest way to install this tool is by using npm with the `-g` flag:
 ```sh
 npm install -g html-template-manager
-```
-
-It can also be added as a dev dependency:
-```sh
-npm install --save-dev -g html-template-manager
 ```
 
 You could also just clone this repo:
