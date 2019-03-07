@@ -44,6 +44,7 @@ When installing locally in a project folder, you need to create scripts in your 
 ```
 
 Using the example above, you would use the following commands,
+\
 
 to update files as you make changes to the template file:
 ```sh
@@ -59,7 +60,7 @@ to update html files once:
 ```sh
 npm run once
 ```  
- \ 
+\ 
 to see which paths the manager is currently using:
 ```sh
 npm run paths
