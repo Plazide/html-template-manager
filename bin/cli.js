@@ -10,12 +10,10 @@ const args = process.argv;
 const existingFlags = flags.filter(flag => flagExists(args, flag));
 const cwd = process.cwd();
 
-let template = (args[2] in flags) ? args[2] : null;
-let static = (args[3] in flags) ? args[3] : null;
+let template = (args[2] in flags) ? null : args[2];
+let static = (args[3] in flags) ? null : args[3];
 
-//console.log(existingFlags);
-
-if(template || static){
+if(template && static){
 	// If template or static arguments are passed to the cli,
 	// set the config values to the passed values and save the new config.
 	config.static_folder = static;
