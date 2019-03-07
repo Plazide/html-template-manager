@@ -50,15 +50,18 @@ to update files as you make changes to the template file:
 npm run template
 ```
 
+
 to set paths to the template file and html folder:
 ```sh
 npm run init
 ```
 
+
 to update html files once:
 ```sh
 npm run once
 ```
+
 
 to see which paths the manager is currently using:
 ```sh
