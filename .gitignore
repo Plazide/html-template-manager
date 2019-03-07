@@ -2,4 +2,4 @@ node_modules/*
 static/*
 templates/*
 public/*
-data/*
+data/config.json
