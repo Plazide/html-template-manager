@@ -4,7 +4,8 @@
   "description": "A simple template manager for html files.",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon bin/cli.js"
+	"start": "nodemon bin/cli.js",
+	"push-readme": "git add README.md && git commit -m \"Update README.md\" && git push"
   },
   "preferGlobal": true,
   "bin": {
