@@ -4,10 +4,17 @@ A simple template manager for html files.
 
 ## Installation
 
-Easiest way to install this tool is by using npm with the `-g` flag:
+Installing globally, this is the easiest way to install:
 ```sh
 npm install -g html-template-manager
 ```
+When installing globally, refer to [Using globally](#using-globally).
+
+Installing locally:
+```sh
+npm install --save-dev html-template-manager
+```
+When installing locally, refer to [Using locally](#using-locally).
 
 You could also just clone this repo:
 ```sh
@@ -15,6 +22,73 @@ git clone https://github.com/Plazide/html-template-manager.git
 ```
 
 ## How to use?
+
+### Using locally
+
+#### Run with npm scripts
+When installing locally in a project folder, you need to create scripts in your package.json file to be able to run the template manager. Use the following examples as a reference.
+
+```json
+{
+  "name": "MyProject",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+	"template": "template",
+	"init": "template templates/template.html static",
+	"once": "template --once",
+	"paths": "template --paths"
+  }
+}
+
+```
+
+Using the example above, you would use the following commands,
+
+to update files as you make changes to the template file:
+```sh
+npm run template
+```
+
+to set paths to the template file and html folder:
+```sh
+npm run init
+```
+
+to update html files once:
+```sh
+npm run once
+```
+
+to see which paths the manager is currently using:
+```sh
+npm run paths
+```
+
+#### Run together with other scripts
+Alternatively, you could use something like [Concurrently](https://www.npmjs.com/package/concurrently) to run the template manager at the same time as other scripts.
+
+For example:
+```json
+{
+  "name": "MyProject",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+	"start": "concurrently \"template\" \"node server.js\"",
+	"init": "template templates/template.html static",
+	"once": "template --once",
+	"paths": "template --paths"
+  }
+}
+```
+
+To run the template manager at the same time as the server, you would just do:
+```sh
+npm start
+```
+
+### Using globally
 
 #### Not specifying paths
 Once the package is installed globally, all you need to do is run:
@@ -47,18 +121,18 @@ If you want to see which paths you currently have configured, you can run:
 template --paths
 ```
 
-#### Without npm
-If you chose to clone this repo, you would run:
-```sh
-node lib/index.js
-```
-This is not recommended since it will prevent you from adding arguments.
-
 #### Declaring template files
 Files that are supposed to inherit the html of the template will need `<!-- TemplateFile -->` comment somewhere inside of them. It doesn't really matter where the comment is placed, but it is recommended to put it at the top of the head tag.
 
 #### Declaring editable areas
 Inside of your template file, you dedicate editable areas by using `<!-- BeginEditable -->` and `<!-- EndEditable -->`. It is recommended to wrap the entire title tag, both opening and closing tag, inside of these since comments are visible when inside the title tag.
+
+## Without npm
+If you chose to clone this repo, you would run:
+```sh
+node lib/index.js
+```
+This is not recommended since it will prevent you from adding arguments.
 
 ## Examples
 
