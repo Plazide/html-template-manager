@@ -118,6 +118,8 @@ template <your-template-file> <your-html-folder> --once
 
 By running the CLI with both of these arguments, the template manager will automatically create the specified files and folders if they don't already exist. It will also save the paths so that you don't have to specify them again. If you for some reason decide you want to change the paths in the future, simply run the same command but specify different paths.
 
+It's worth noting that since we are running the command globally, the paths will be the same even if you run the command from a different directory. This is not the case when installing locally.
+
 If you want to see which paths you currently have configured, you can run:
 ```sh
 template --paths
