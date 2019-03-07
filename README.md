@@ -35,7 +35,7 @@ When installing locally in a project folder, you need to create scripts in your 
   "main": "index.js",
   "scripts": {
 	"template": "template",
-	"init": "template templates/template.html static",
+	"init": "template templates/template.html static --once",
 	"once": "template --once",
 	"paths": "template --paths"
   }
@@ -77,7 +77,7 @@ For example:
   "main": "index.js",
   "scripts": {
 	"start": "concurrently \"template\" \"node server.js\"",
-	"init": "template templates/template.html static",
+	"init": "template templates/template.html static --once",
 	"once": "template --once",
 	"paths": "template --paths"
   }
