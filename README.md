@@ -3,6 +3,7 @@
 A simple template manager for html files.
 
 ## Installation
+This package should be installed globally to work properly, which means you need the `-g` flag.
 
 Easiest way to install this tool is by using npm:
 ```sh
@@ -14,12 +15,14 @@ It can also be added as a dev dependency:
 npm install --save-dev -g html-template-manager
 ```
 
-You could also just clone this repo and run.
-
-This package should be installed globally to work properly, which means you need the `-g` flag.
+You could also just clone this repo:
+```sh
+git clone https://github.com/Plazide/html-template-manager.git
+```
 
 ## How to use?
 
+#### Not specifying paths
 Once the package is installed globally, all you need to do is run:
 ```sh
 template
@@ -29,35 +32,26 @@ or, to update files once:
 template --once
 ```
 
-By using these either of these commands, the html-template-manager will create the necessary folders and files that it needs to function. These include the `./static` folder where your html files will be placed, and `./templates/template.html` which is your template file. Any html that is the same across html files should be in here.
+By using these either of these commands, the html-template-manager will create the necessary folders and files that it needs to function. These include the `./static` folder where your html files will be placed, and `./templates/template.html` which is your template file.
 
-#### Use cases
-This template manager supports two kinds of use cases. You can either run the template CLI and let it update your html files everytime you make changes to your template, or you could run it manually whenever you see fit.
+If you have already specified paths using one of the methods in [Specifying paths](#specifying-paths), these commands will use those paths.
 
 #### Specifying paths
 To run the template manager simply do:
 ```sh
 template <your-template-file> <your-html-folder>
 ```
-or, to only run it once to update changes:
+or, to update files once:
 ```sh
 template <your-template-file> <your-html-folder> --once
 ```
 
-By running the CLI with both of these arguments, the template manager will automatically create the files and folders if they don't already exist. It will also save the paths so that you don't have to specify them again, look at [Not specifying paths](#not-specifying-paths). If you for some reason decide you want to change the paths in the future, simply run the same command but specify different paths.
+By running the CLI with both of these arguments, the template manager will automatically create the specified files and folders if they don't already exist. It will also save the paths so that you don't have to specify them again. If you for some reason decide you want to change the paths in the future, simply run the same command but specify different paths.
 
-#### Not specifying paths
-Alternatively, you could omit the arguments and use the default paths that the manager creates for you:
+If you want to see which paths you currently have configured, you can run:
 ```sh
-template
+template --paths
 ```
-or, to only run it once and update changes:
-```sh
-template --once
-```
-This is the easiest way to run the manager.
-
-If you have already given the template manager paths in the past, they will be saved. This means that you can run the manager this way everytime but the first time. If you don't want custom paths, then you only ever have to use it this way.
 
 #### Without npm
 If you chose to clone this repo, you would run:
