@@ -49,24 +49,21 @@ to update files as you make changes to the template file:
 ```sh
 npm run template
 ```  
-  
-
+\
 to set paths to the template file and html folder:
 ```sh
 npm run init
 ```  
-  
-
+\
 to update html files once:
 ```sh
 npm run once
 ```  
-  
-  
+ \ 
 to see which paths the manager is currently using:
 ```sh
 npm run paths
-```
+```  
 
 #### Run together with other scripts
 Alternatively, you could use something like [Concurrently](https://www.npmjs.com/package/concurrently) to run the template manager at the same time as other scripts.
