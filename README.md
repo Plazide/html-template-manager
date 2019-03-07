@@ -4,7 +4,7 @@ A simple template manager for html files.
 
 ## Installation
 
-Installing globally, this is the easiest way to install:
+Installing globally:
 ```sh
 npm install -g html-template-manager
 ```
@@ -20,6 +20,7 @@ You could also just clone this repo:
 ```sh
 git clone https://github.com/Plazide/html-template-manager.git
 ```
+When cloning the repo, refer to [Without npm](#without-npm)
 
 ## How to use?
 
