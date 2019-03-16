@@ -1,6 +1,6 @@
 # HTML Template manager
 
-A simple template manager for html files.
+This package is a development tool to help you manage multiple html files with similar structure. Your files will automatically update upon saving the template. Alternatively, it is possible to update files manually by running the cli with the `--once` flag.
 
 ## Installation
 
