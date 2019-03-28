@@ -1,6 +1,6 @@
 {
   "name": "html-template-manager",
-  "version": "0.5.5",
+  "version": "0.5.6-dev",
   "description": "A simple template manager for html files.",
   "main": "index.js",
   "scripts": {
