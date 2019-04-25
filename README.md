@@ -1,6 +1,6 @@
 # HTML Template manager
 
-This package is a development tool to help you manage multiple html files with similar structure. It lets you have multiple html files with similar structure that will change when modifying one template file.
+This package is a development tool to help you manage multiple html files with similar structure. It lets you create a template file and assign a directory that will inherit the template. The package is also compatible with dreamweaver templates.
 
 ## Installation
 
@@ -126,10 +126,10 @@ template --paths
 ```
 
 #### Declaring template files
-Files that are supposed to inherit the html of the template will need `<!-- TemplateFile -->` comment somewhere inside of them. It doesn't really matter where the comment is placed, but it is recommended to put it at the top of the head tag.
+To make a file inherit the template, you need to add a `<!-- InstanceBegin -->` comment right before the `<head>` tag. This works with dreamweaver templates as well, but the options in a dreamweaver file will be ignored. You also need to close the instance with a `<!-- InstanceEnd -->` comment right after the closing `</body>` tag.
 
 #### Declaring editable areas
-Inside of your template file, you dedicate editable areas by using `<!-- BeginEditable -->` and `<!-- EndEditable -->`. It is recommended to wrap the entire title tag, both opening and closing tag, inside of these since comments are visible when inside the title tag.
+To declare the beginning of an editable area, you can use either a `<!-- BeginEditable -->` or a `<!-- InstanceBeginEditable -->` comment. To declare the end of an editable area, you can use either `<!-- EndEditable -->` or `<!-- InstanceEndEditable -->`. It is recommended to wrap the entire title tag, both opening and closing tag, inside of these since comments are visible when inside the title tag.
 
 ## Without npm
 If you chose to clone this repo, you would run:
@@ -152,7 +152,6 @@ A basic template file.
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<!-- TemplateFile -->
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -170,5 +169,33 @@ A basic template file.
 
 	<!-- EndEditable -->
 </body>
+</html>
+```
+
+#### File to inherit template
+The structure of a file that inherits the template.
+```html
+<!DOCTYPE html>
+<html lang="en">
+<!-- InstanceBegin -->
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<!-- BeginEditable -->
+	<title>Document</title>
+	<!-- EndEditable -->
+</head>
+<body>
+	<header>
+		<a href="/index.html">Home</a>
+		<a href="/contact.html">Contact</a>
+		<a href="/about.html">About</a>
+	</header>
+	<!-- BeginEditable -->
+
+	<!-- EndEditable -->
+</body>
+<!-- InstanceEnd -->
 </html>
 ```
